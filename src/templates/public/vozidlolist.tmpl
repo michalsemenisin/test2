@@ -1,0 +1,15 @@
+{% from "macros/fields.tmpl" import render_input_field, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}Vysledek vystup{% endblock %}
+
+{% block content %}
+ <table>
+    {% for n in data %}
+        <table border="1">
+            <tr><td>typ: {{ n.typ }}</td></tr><tr><td>spz: {{ n.spz }}</td></tr><br>
+        </table>
+    {% endfor %}
+    </table>
+
+{% endblock %}
